@@ -1,0 +1,9 @@
+%h1 Tickety
+%hr
+
+- @tickets.each do |ticket|
+  .well
+    %p= ticket.title
+    %div{id: dom_id(ticket)}
+      = render "button", ticket: ticket
+    %p= ticket.description
